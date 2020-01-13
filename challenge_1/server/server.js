@@ -10,7 +10,7 @@ server.listen(3000, () => {
   console.log('JSON Server is running, Listening on port 3000...');
 })
 
-server.get('/events/:date/:_page/:_limit', (req, res) => {
+server.get('http://localhost:3000/events/:date/:_page/:_limit', (req, res) => {
     res.jsonp(req.query)
   })
   

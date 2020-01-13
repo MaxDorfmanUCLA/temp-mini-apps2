@@ -7,7 +7,9 @@ class App extends React.Component {
         super(props)
         this.state = {
             search: '',
-            results: []
+            results: [],
+            pageCount: 10,
+
         }
         this.updateSearch = this.updateSearch.bind(this);
         this.searchEvent = this.searchEvent.bind(this);
@@ -16,7 +18,7 @@ class App extends React.Component {
     searchEvent(e){
         e.preventDefault();
         let date = e.target.parentElement.firstChild.value;
-        $.get(`http://localhost:3000/events?date=${date}`, function( data ) {
+        $.get(`http://localhost:3000/events?date=${date}&?_page=1&_limit=10`, function( data ) {
             console.log(data);
             this.setState({
                 results: data
@@ -47,20 +49,24 @@ class App extends React.Component {
                         <li><p>{JSON.stringify(event)}</p></li>
                     ))}
                 </ol>
+                <div className="commentBox">
+        
+        <ReactPaginate
+          previousLabel={'previous'}
+          nextLabel={'next'}
+          breakLabel={'...'}
+          breakClassName={'break-me'}
+          pageCount={this.state.pageCount}
+          marginPagesDisplayed={2}
+          pageRangeDisplayed={5}
+          //onPageChange={this.handlePageClick}
+          containerClassName={'pagination'}
+          subContainerClassName={'pages pagination'}
+          activeClassName={'active'}
+        />
+      </div>
             </div>
-        //     <ReactPaginate
-        //   previousLabel={'previous'}
-        //   nextLabel={'next'}
-        //   breakLabel={'...'}
-        //   breakClassName={'break-me'}
-        //   pageCount={this.state.pageCount}
-        //   marginPagesDisplayed={2}
-        //   pageRangeDisplayed={5}
-        //   onPageChange={this.handlePageClick}
-        //   containerClassName={'pagination'}
-        //   subContainerClassName={'pages pagination'}
-        //   activeClassName={'active'}
-        // />
+        
         )
     }
 }
