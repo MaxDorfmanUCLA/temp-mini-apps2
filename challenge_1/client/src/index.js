@@ -7,23 +7,45 @@ class App extends React.Component {
         super(props)
         this.state = {
             search: '',
+            allResults: [],
             results: [],
             pageCount: 10,
-
+            totalPages: 0,
+            page: 0
         }
         this.updateSearch = this.updateSearch.bind(this);
+        this.searchEvent = this.searchEvent.bind(this);
         this.searchEvent = this.searchEvent.bind(this);
     }
 
     searchEvent(e){
         e.preventDefault();
-        let date = e.target.parentElement.firstChild.value;
-        $.get(`http://localhost:3000/events?date=${date}&?_page=1&_limit=10`, function( data ) {
+        //let date = e.target.parentElement.firstChild.value;
+        let date = this.state.search;
+        $.get(`http://localhost:3000/events?date=${date}&?_page=1`, function( data ) {
             console.log(data);
+            console.log(data.length);
             this.setState({
-                results: data
+                allResults: data
             })
-        }.bind(this));
+            this.setState({
+                results: this.state.allResults.slice(this.state.page*10, (this.state.page*10)+10)
+            })
+            let pgs = Math.ceil(data.length/this.state.pageCount);
+            this.setState({
+                totalPages: pgs
+            })
+        }.bind(this))
+    }
+
+    handlePageClick(e){
+        console.log(e);
+        this.setState({
+            page: e.selected
+        })
+        this.setState({
+            results: this.state.allResults.slice(e.selected*10, (e.selected*10)+10)
+        })
     }
 
     updateSearch(e){
@@ -35,6 +57,7 @@ class App extends React.Component {
     
     render() {
         return (
+            
             <div>
                 <h1>Historical Event Finder</h1>
                 <h4>Enter a Historical Date to See What Historical Events Took Place at That Time</h4>
@@ -56,10 +79,10 @@ class App extends React.Component {
           nextLabel={'next'}
           breakLabel={'...'}
           breakClassName={'break-me'}
-          pageCount={this.state.pageCount}
+          pageCount={this.state.totalPages}
           marginPagesDisplayed={2}
           pageRangeDisplayed={5}
-          //onPageChange={this.handlePageClick}
+          onPageChange={(e) => {this.handlePageClick(e)}}
           containerClassName={'pagination'}
           subContainerClassName={'pages pagination'}
           activeClassName={'active'}
