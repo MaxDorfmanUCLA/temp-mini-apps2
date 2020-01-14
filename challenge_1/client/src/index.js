@@ -62,9 +62,12 @@ class App extends React.Component {
                 <h1>Historical Event Finder</h1>
                 <h4>Enter a Historical Date to See What Historical Events Took Place at That Time</h4>
                 <form>
-                <input class="text" placeholder="Search..." value={this.state.search} onChange={(e) => {this.updateSearch(e)}}></input>
+                <input class="text" placeholder="YYYY/MM/DD" value={this.state.search} onChange={(e) => {this.updateSearch(e)}}></input>
                 <button class="button" onClick={(e) => {this.searchEvent(e)}}>Submit</button>
                 </form>
+                <h5>Most dates should be searched with the format YYYY/MM/DD.</h5>
+                <h5>Some dates can be searched with just the year, Ex: 257.</h5>
+                <h5>BC events are searched with a negative year, Ex: -200.</h5>
                 <br></br>
                 <h2>Results:</h2>
                 <ol>
