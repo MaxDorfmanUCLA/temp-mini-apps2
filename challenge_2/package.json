@@ -4,9 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "build": "nodemon ./client/src/server.js",
+    "build": "nodemon server.js",
     "react-dev": "webpack -d --watch",
-    "start": "live-server ./client/dist"
+    "start": "live-server ./client/dist/index.html"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +14,6 @@
   "dependencies": {
     "chart.js": "^2.9.3",
     "express": "^4.17.1",
-    "jquery": "^3.4.1",
     "nodemon": "^2.0.2",
     "path": "^0.12.7",
     "react": "^16.12.0",

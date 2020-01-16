@@ -1,0 +1,147 @@
+
+img{
+  margin: 0px;
+
+  background: url('../../images/oie_GZOYavvYZoMn.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-size: 18px;
+}
+
+.something {
+  border: 2px solid black;
+}
+
+@keyframes slide {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+  
+    50% {
+      transform: translate(50px, 0);
+    }
+  
+    80% {
+      transform: translate(-50px, 0);
+    }
+  }
+
+  
+
+
+
+  @keyframes rotate {
+    0%, 75% {
+      transform: rotate(0deg);
+    }
+    /* 25% {
+      transform: rotate(-20deg);
+    } */
+    75% {
+      transform: rotate(85deg);
+    }
+  }
+
+  /* .sqMove {
+    height: 80px;
+    width: 25px;
+    background-color:red;
+    display: inline-block;
+    margin-left: 50%;
+
+  } */
+
+  .goal {
+    display: grid;
+  }
+
+  
+  .sq1 {
+    height: 80px;
+    width: 25px;
+    
+    background-color:whitesmoke;
+    border: 1px solid;
+    display: inline-block;
+    animation: rotate .5s linear alternate;
+    margin-left: 40%;
+    margin-right: -37.3%;
+  } 
+
+  .sq2 {
+    height: 80px;
+    width: 25px;
+    
+    background-color:whitesmoke;
+    border: 1px solid;
+    display: inline-block;
+    animation: rotate .5s linear alternate;
+    margin-left: 42.8%;
+    margin-right: -40.55%;
+  } 
+
+  .sq3 {
+    height: 80px;
+    width: 25px;
+    
+    background-color:whitesmoke;
+    border: 1px solid;
+    display: inline-block;
+    animation: rotate .5s linear alternate;
+    margin-left: 45.05%;
+    margin-right: -42.8%;
+  } 
+
+  .sq4 {
+    height: 80px;
+    width: 25px;
+    
+    background-color:whitesmoke;
+    border: 1px solid;
+    display: inline-block;
+    animation: rotate .5s linear alternate;
+    margin-left: 47.4%;
+  } 
+  
+/* 
+  div {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 3;
+  } */
+
+  #animated_div {
+    width:80px;
+    height:80px;
+    background: #92B901;
+    color: #ffffff;
+    position: relative;
+    font-weight:bold;
+    font-size:20px;
+    /* padding:10px; */
+    animation: animated_div 2s 1;
+    border-radius:50%;
+    }
+    
+    @keyframes animated_div
+    {
+    0% {transform: rotate(0deg);left:0px;}
+    10% {transform: rotate(20deg);left:50px;}
+    20% {transform: rotate(0deg);left:100px;}
+    30% {transform: rotate(0deg);left:150px;}
+    40% {transform: rotate(0deg);left:200px;background:#1ec7e6;}
+    50% {transform: rotate(-360deg);left:250px;}
+    60% {transform: rotate(0deg);left:300px;}
+    70% {transform: rotate(20deg);left:350px;}
+    80% {transform: rotate(0deg);left:400px;}
+    90% {transform: rotate(0deg);left:450px;}
+    100% {transform: rotate(0deg);left:500px;background:#1ec7e6;}
+    
+    }
+    
+   
