@@ -9,9 +9,6 @@ img{
   font-size: 18px;
 }
 
-.something {
-  border: 2px solid black;
-}
 
 @keyframes slide {
     0%, 100% {
@@ -67,7 +64,7 @@ img{
     animation: rotate .3s linear alternate;
     margin-left: 40%;
     margin-right: -37.3%;
-    margin-bottom: -40px;
+    margin-bottom: -50px;
   } 
 
   .sq2 {
@@ -80,7 +77,7 @@ img{
     animation: rotate .3s linear alternate;
     margin-left: 42.5%;
     margin-right: -39.75%;
-    margin-bottom: -40px;
+    margin-bottom: -50px;
   } 
 
   .sq3 {
@@ -93,7 +90,7 @@ img{
     animation: rotate .3s linear alternate;
     margin-left: 45.1%;
     margin-right: -42.8%;
-    margin-bottom: -40px;
+    margin-bottom: -50px;
   } 
 
   .sq4 {
@@ -136,9 +133,7 @@ img{
     @keyframes animated_div
     {
     0% {transform: rotate(0deg);top:20px;}
-    10% {transform: rotate(0deg);top:100px;}
-    20% {transform: rotate(0deg);top:-400px;}
-  
+    10% {transform: rotate(180deg);top:100px;}
+    50% {transform: rotate(180deg);top:-400px;background:#1ec7e6;}
     }
     
-   
