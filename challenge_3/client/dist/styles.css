@@ -64,9 +64,10 @@ img{
     background-color:whitesmoke;
     border: 1px solid;
     display: inline-block;
-    animation: rotate .5s linear alternate;
+    animation: rotate .3s linear alternate;
     margin-left: 40%;
     margin-right: -37.3%;
+    margin-bottom: -40px;
   } 
 
   .sq2 {
@@ -76,9 +77,10 @@ img{
     background-color:whitesmoke;
     border: 1px solid;
     display: inline-block;
-    animation: rotate .5s linear alternate;
-    margin-left: 42.8%;
-    margin-right: -40.55%;
+    animation: rotate .3s linear alternate;
+    margin-left: 42.5%;
+    margin-right: -39.75%;
+    margin-bottom: -40px;
   } 
 
   .sq3 {
@@ -88,9 +90,10 @@ img{
     background-color:whitesmoke;
     border: 1px solid;
     display: inline-block;
-    animation: rotate .5s linear alternate;
-    margin-left: 45.05%;
+    animation: rotate .3s linear alternate;
+    margin-left: 45.1%;
     margin-right: -42.8%;
+    margin-bottom: -40px;
   } 
 
   .sq4 {
@@ -100,7 +103,7 @@ img{
     background-color:whitesmoke;
     border: 1px solid;
     display: inline-block;
-    animation: rotate .5s linear alternate;
+    animation: rotate .3s linear alternate;
     margin-left: 47.4%;
   } 
   
@@ -124,24 +127,26 @@ img{
     font-weight:bold;
     font-size:20px;
     /* padding:10px; */
-    animation: animated_div 2s 1;
+    /* animation: animated_div 2s 1; */
     border-radius:50%;
+    margin-left: 45.5%;
+    margin-top: 26%;
     }
     
-    @keyframes animated_div
+    /* @keyframes animated_div
     {
-    0% {transform: rotate(0deg);left:0px;}
-    10% {transform: rotate(20deg);left:50px;}
-    20% {transform: rotate(0deg);left:100px;}
-    30% {transform: rotate(0deg);left:150px;}
-    40% {transform: rotate(0deg);left:200px;background:#1ec7e6;}
-    50% {transform: rotate(-360deg);left:250px;}
-    60% {transform: rotate(0deg);left:300px;}
-    70% {transform: rotate(20deg);left:350px;}
-    80% {transform: rotate(0deg);left:400px;}
+    0% {transform: rotate(0deg);left:450px;}
+    10% {transform: rotate(0deg);top:-300px;}
+    20% {transform: rotate(0deg);top:-500px;}
+    30% {transform: rotate(0deg);left:450px;}
+    40% {transform: rotate(0deg);left:450px;background:#1ec7e6;}
+    50% {transform: rotate(-360deg);left:450px;}
+    60% {transform: rotate(0deg);left:450px;}
+    70% {transform: rotate(20deg);left:450px;}
+    80% {transform: rotate(0deg);left:450px;}
     90% {transform: rotate(0deg);left:450px;}
-    100% {transform: rotate(0deg);left:500px;background:#1ec7e6;}
+    100% {transform: rotate(0deg);left:450px;background:#1ec7e6;}
     
     }
-    
+     */
    
