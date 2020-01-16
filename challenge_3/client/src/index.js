@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import Ball from '../dist/components/ball.js'
+import Pins from '../dist/components/pins.js'
 
 
 
@@ -9,13 +10,14 @@ class App extends React.Component{
         super(props)
         
     }
- 
-    
 
     render(){
         
         return(
-        <div className='something'>Lets Bowl</div>
+        <div>
+            <Ball />
+            <Pins />
+        </div>
         )
         }
     }
