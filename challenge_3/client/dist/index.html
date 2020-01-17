@@ -7,28 +7,27 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 </head>
 <body>
-  <img class="bg" src="oie_GZOYavvYZoMn.jpg" width="1200" height="787">
-
+  <img class="bg" src="oie_oEhyUAHX6dtl.png" width="1200" height="780">
 
   
   <div id="lane">
     <div>
-      <img id="sq1t" src="oie_transparent (3).jpg" width="65" height="80">
-      <img id="sq1t" src="oie_transparent (3).jpg" width="65" height="80">
-      <img id="sq1" src="oie_transparent (3).jpg" width="65" height="80">
-      <img id="sq1" src="oie_transparent (3).jpg" width="65" height="80">
+      <img id="sq1t" src="oie_transparent (3).jpg" width="55" height="73">
+      <img id="sqnew1t" src="oie_transparent (3).jpg" width="55" height="73">
+      <img id="sq1" src="oie_transparent (3).jpg" width="55" height="73">
+      <img id="sqnew1" src="oie_transparent (3).jpg" width="55" height="73">
     </div>
     <div>
-      <img id="sq2t" src="oie_transparent (3).jpg" width="65" height="80">
-      <img id="sq2t" src="oie_transparent (3).jpg" width="65" height="80">
-      <img id="sq2" src="oie_transparent (3).jpg" width="65" height="80">
+      <img id="sq2t" src="oie_transparent (3).jpg" width="55" height="73">
+      <img id="sqnew2t" src="oie_transparent (3).jpg" width="55" height="73">
+      <img id="sq2" src="oie_transparent (3).jpg" width="55" height="73">
     </div>
     <div>
-      <img id="sq3t" src="oie_transparent (3).jpg" width="65" height="80">
-      <img id="sq3" src="oie_transparent (3).jpg" width="65" height="80">
+      <img id="sq3t" src="oie_transparent (3).jpg" width="55" height="73">
+      <img id="sq3" src="oie_transparent (3).jpg" width="55" height="73">
     </div>
     <div>
-      <img id="sq4" src="oie_transparent (3).jpg" width="65" height="80">
+      <img id="sq4" src="oie_transparent (3).jpg" width="55" height="73">
     </div>
   </div>
    
@@ -39,14 +38,15 @@
    var code = event.keyCode || event.which;
    console.log('event.keyCode', event.keyCode);
    console.log('event.which', event.which);
-   if(code == 38) { //Down arrow
+   if(code == 38) { //up arrow
      //guy.y += guy.speed * modifier;
      $('#ball').addClass('bowl');
      $('#sq1t').addClass('sq1t');
-     $('#sq1t').addClass('sq1t');
      $('#sq1').addClass('sq1');
+     $('#sqnew1t').addClass('sq1t');
+     $('#sqnew1').addClass('sq1');
      $('#sq2t').addClass('sq2t');
-     $('#sq2t').addClass('sq2t');
+     $('#sqnew2t').addClass('sq2t');
      $('#sq2').addClass('sq2');
      $('#sq3t').addClass('sq3t');
      $('#sq3').addClass('sq3');
@@ -61,10 +61,11 @@ $(document).bind("keydown", function(event) {
      //guy.y += guy.speed * modifier;
      $('#ball').removeClass('bowl');
      $('#sq1t').removeClass('sq1t');
-     $('#sq1t').removeClass('sq1t');
      $('#sq1').removeClass('sq1');
+     $('#sqnew1t').removeClass('sq1t');
+     $('#sqnew1').removeClass('sq1');
      $('#sq2t').removeClass('sq2t');
-     $('#sq2t').removeClass('sq2t');
+     $('#sqnew2t').removeClass('sq2t');
      $('#sq2').removeClass('sq2');
      $('#sq3t').removeClass('sq3t');
      $('#sq3').removeClass('sq3');
