@@ -6,7 +6,6 @@ var path = require('path');
 
 var app = express();
 app.use(express.static(path.join(__dirname, '/client/dist')));
-console.log(__dirname);
 app.use(bodyParser.json());  
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -18,6 +17,14 @@ app.listen(8080, function(){
 app.get('/', function(req,res) {
     res.status(200)
 })
+
+app.get('/:file', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../images/', req.params.file));
+    console.log(__dirname);
+    console.log(req);
+})
+
+
 
 //HISTORY:
 //https://api.coindesk.com/v1/bpi/historical/close.json   ?start=2013-09-01&end=2013-09-05
